@@ -7,8 +7,8 @@ x=0.upto(8).map{s[_1].dup}
 gets
 $<.each{
     a,b,c=_1.scan(/\d+/).map &:to_i
-    s[c-1]+=(s[b-1].pop(a).reverse)
+    s[c-1]+=s[b-1].pop(a).reverse
     x[c-1]+=x[b-1].pop(a)
 }
-p s.map{|y|y[-1]}*''
-p x.map{|y|y[-1]}*''
+puts s.map{|y|y[-1]}*''
+puts x.map{|y|y[-1]}*''
