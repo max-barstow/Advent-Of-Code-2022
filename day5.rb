@@ -10,5 +10,5 @@ $<.each{
     s[c-1]+=s[b-1].pop(a).reverse
     x[c-1]+=x[b-1].pop(a)
 }
-puts s.map{|y|y[-1]}*''
-puts x.map{|y|y[-1]}*''
+puts s.map{_1[~0]}*''
+puts x.map{_1[~0]}*''
